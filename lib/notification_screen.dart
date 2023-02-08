@@ -21,23 +21,15 @@ class _NotificationScreenState extends State<NotificationScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 currentId++;
                 LocalNotificationService.localNotificationService
                     .showNotification(id: currentId);
               },
-              child: const Text("SIMPLE Notifiction 1"),
+              child: const Text("Simple"),
             ),
-            TextButton(
-              onPressed: () {
-                currentId++;
-                LocalNotificationService.localNotificationService
-                    .showNotification(id: currentId);
-              },
-              child: const Text("SIMPLE Notifiction 2"),
-            ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 currentId++;
                 LocalNotificationService.localNotificationService
@@ -46,24 +38,24 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   delayedTime: 3,
                 );
               },
-              child: const Text("SCHUADULED NOTIFICATION "),
+              child: const Text("Scheduled"),
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 currentId++;
                 LocalNotificationService.localNotificationService
                     .showPeriodically(id: currentId);
               },
-              child: const Text("PERIODIC NOTIFICATION EVERY MINUT"),
+              child: const Text("Periodic"),
             ),
-            const Expanded(child: SizedBox()),
-            TextButton(
+            const SizedBox(height: 50),
+            ElevatedButton(
                 onPressed: () {
                   LocalNotificationService.localNotificationService
                       .cancelAllNotifications();
                 },
                 child: const Text("Cancel All Notifications")),
-            TextButton(
+            ElevatedButton(
                 onPressed: () {
                   LocalNotificationService.localNotificationService
                       .cancelNotificationById(currentId);
