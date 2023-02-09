@@ -55,12 +55,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       .cancelAllNotifications();
                 },
                 child: const Text("Cancel All Notifications")),
-            ElevatedButton(
-                onPressed: () {
-                  LocalNotificationService.localNotificationService
-                      .cancelNotificationById(currentId);
-                },
-                child: const Text("Cancel Notification By id")),
+            // ElevatedButton(
+            //     onPressed: () {
+            //       LocalNotificationService.localNotificationService
+            //           .cancelNotificationById(currentId);
+            //     },
+            //     child: const Text("Cancel Notification By id")),
           ],
         ),
       ),

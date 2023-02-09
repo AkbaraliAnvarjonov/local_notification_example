@@ -60,9 +60,7 @@ class LocalNotificationService {
   }
 
   @pragma('vm:entry-point')
-  void notificationTapBackground(NotificationResponse notificationResponse) {
-    print("TAPPED FROM BACKGROUND");
-  }
+  void notificationTapBackground(NotificationResponse notificationResponse) {}
 
 // Android
 
